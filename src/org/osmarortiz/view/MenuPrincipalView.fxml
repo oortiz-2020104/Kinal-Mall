@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="328.0" prefWidth="993.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.osmarortiz.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="328.0" fitWidth="993.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../images/KinalMallLogo.png" />
+         </image>
+      </ImageView>
+      <MenuBar prefHeight="35.0" prefWidth="993.0" stylesheets="@../resources/KinalMallCSS.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Módulos">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaAdministracion" text="Administración" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaCargos" text="Cargos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaDepartamentos" text="Departamentos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaHorarios" text="Horarios" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTipoClientes" text="Tipo de Clientes" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaLocales" text="Locales" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProveedores" text="Proveedores" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Reportes">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Eliminar" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="?">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaProgramador" text="Acerca de..." />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button layoutX="841.0" layoutY="284.0" mnemonicParsing="false" onAction="#cerrarSesion" prefHeight="44.0" prefWidth="152.0" style="-fx-background-color: transparent;" styleClass="button1" stylesheets="@../resources/KinalMallCSS.css" text="Cerrar sesión">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

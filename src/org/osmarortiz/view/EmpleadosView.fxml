@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="1331.0" stylesheets="@../resources/KinalMallCSS.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.osmarortiz.controller.EmpleadosController">
+   <children>
+      <AnchorPane prefHeight="591.0" prefWidth="260.0" styleClass="left-anchor-pane" stylesheets="@../resources/KinalMallCSS.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="112.0" fitWidth="260.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/KinalMallLogoTrans.png" />
+               </image>
+            </ImageView>
+            <VBox layoutX="53.0" layoutY="141.0" prefHeight="200.0" prefWidth="207.0">
+               <children>
+                  <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" prefHeight="15.0" prefWidth="260.0" styleClass="button1" stylesheets="@../resources/KinalMallCSS.css" text="Nuevo" />
+                  <Button fx:id="btnEliminar" layoutX="10.0" layoutY="54.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="20.0" prefWidth="260.0" styleClass="button1" stylesheets="@../resources/KinalMallCSS.css" text="Eliminar" />
+                  <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#editar" prefHeight="20.0" prefWidth="260.0" styleClass="button1" stylesheets="@../resources/KinalMallCSS.css" text="Editar" />
+                  <Button fx:id="btnReporte" mnemonicParsing="false" onAction="#reporte" prefHeight="44.0" prefWidth="207.0" styleClass="button1" stylesheets="@../resources/KinalMallCSS.css" text="Reporte" />
+               </children>
+            </VBox>
+            <ImageView fx:id="imgNuevo" fitHeight="31.0" fitWidth="24.0" layoutX="16.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/add-icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgEditar" fitHeight="31.0" fitWidth="24.0" layoutX="16.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/pencil-icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgEliminar" fitHeight="31.0" fitWidth="24.0" layoutX="16.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/delete-icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgReporte" fitHeight="31.0" fitWidth="24.0" layoutX="16.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/paper-icon.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="11.0" layoutY="74.0" prefHeight="58.0" prefWidth="239.0" styleClass="left-label" stylesheets="@../resources/KinalMallCSS.css" text="Empleados" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="74.0" />
+            <Button layoutX="27.0" layoutY="445.0" mnemonicParsing="false" onMouseClicked="#ventanaCargos" prefHeight="44.0" prefWidth="207.0" styleClass="button2" stylesheets="@../resources/KinalMallCSS.css" text="Cargos" />
+            <Button layoutX="27.0" layoutY="489.0" mnemonicParsing="false" onMouseClicked="#ventanaHorarios" prefHeight="44.0" prefWidth="207.0" styleClass="button2" stylesheets="@../resources/KinalMallCSS.css" text="Horarios" />
+            <Button layoutX="27.0" layoutY="533.0" mnemonicParsing="false" onMouseClicked="#ventanaDepartamentos" prefHeight="44.0" prefWidth="207.0" styleClass="button2" stylesheets="@../resources/KinalMallCSS.css" text="Departamentos" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="260.0" prefHeight="591.0" prefWidth="1071.0" styleClass="main-anchor-pane" AnchorPane.topAnchor="0.0">
+         <children>
+            <GridPane fx:id="grpEmpleados" layoutX="21.0" layoutY="14.0" prefHeight="176.0" prefWidth="904.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="308.0" minWidth="10.0" prefWidth="182.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="382.0" minWidth="0.0" prefWidth="130.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="549.0" minWidth="10.0" prefWidth="141.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="525.0" minWidth="10.0" prefWidth="147.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="525.0" minWidth="10.0" prefWidth="134.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="525.0" minWidth="10.0" prefWidth="171.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label styleClass="label-table" stylesheets="@../resources/KinalMallCSS.css" text="Código empleado:">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="txtCodigoEmpleado" editable="false" prefHeight="37.0" prefWidth="44.0" styleClass="textField" stylesheets="@../resources/KinalMallCSS.css" GridPane.columnIndex="1" />
+                  <Label layoutX="10.0" layoutY="17.0" prefHeight="21.0" prefWidth="121.0" styleClass="label-table" stylesheets="@../resources/KinalMallCSS.css" text="Nombres:" GridPane.columnIndex="2">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="txtNombreEmpleado" editable="false" layoutX="220.0" layoutY="10.0" prefHeight="37.0" prefWidth="211.0" styleClass="textField" stylesheets="@../resources/KinalMallCSS.css" GridPane.columnIndex="3" />
+                  <Label layoutX="172.0" layoutY="22.0" prefHeight="21.0" prefWidth="116.0" styleClass="label-table" stylesheets="@../resources/KinalMallCSS.css" text="Apellidos:" GridPane.columnIndex="4">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="txtApellidoEmpleado" editable="false" layoutX="273.0" layoutY="10.0" prefHeight="37.0" prefWidth="165.0" styleClass="textField" stylesheets="@../resources/KinalMallCSS.css" GridPane.columnIndex="5" />
+                  <Label layoutX="15.0" layoutY="22.0" styleClass="label-table" stylesheets="@../resources/KinalMallCSS.css" text="Correo:" GridPane.rowIndex="1">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="txtCorreoEmpleado" editable="false" layoutX="119.0" layoutY="10.0" prefHeight="37.0" prefWidth="44.0" styleClass="textField" stylesheets="@../resources/KinalMallCSS.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label layoutX="179.0" layoutY="22.0" prefHeight="21.0" prefWidth="109.0" styleClass="label-table" stylesheets="@../resources/KinalMallCSS.css" text="Teléfono:" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="txtTelefonoEmpleado" editable="false" layoutX="288.0" layoutY="10.0" prefHeight="37.0" prefWidth="211.0" styleClass="textField" stylesheets="@../resources/KinalMallCSS.css" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Label layoutX="449.0" layoutY="22.0" prefHeight="44.0" prefWidth="132.0" styleClass="label-table" stylesheets="@../resources/KinalMallCSS.css" text="Fecha contrato:" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label styleClass="label-table" stylesheets="@../resources/KinalMallCSS.css" text="Sueldo:" GridPane.rowIndex="2">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="txtSueldoEmpleado" editable="false" prefHeight="37.0" prefWidth="44.0" styleClass="textField" stylesheets="@../resources/KinalMallCSS.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label layoutX="10.0" layoutY="66.0" prefHeight="21.0" prefWidth="149.0" styleClass="label-table" stylesheets="@../resources/KinalMallCSS.css" text="Cod.Departamento:" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <ComboBox fx:id="cmbCodigoDepartamento" disable="true" prefHeight="37.0" prefWidth="168.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Label prefHeight="21.0" prefWidth="104.0" styleClass="label-table" stylesheets="@../resources/KinalMallCSS.css" text="Cod.Cargo:" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <ComboBox fx:id="cmbCodigoCargo" disable="true" prefHeight="37.0" prefWidth="199.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                  <Label prefHeight="52.0" prefWidth="118.0" styleClass="label-table" stylesheets="@../resources/KinalMallCSS.css" text="Cod.Horario:" GridPane.rowIndex="3">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <ComboBox fx:id="cmbCodigoHorario" disable="true" prefHeight="37.0" prefWidth="163.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label prefHeight="44.0" prefWidth="150.0" styleClass="label-table" stylesheets="@../resources/KinalMallCSS.css" text="Cod.Administración:" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <ComboBox fx:id="cmbCodigoAdministracion" disable="true" prefHeight="37.0" prefWidth="163.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <TableView fx:id="tblEmpleados" layoutX="21.0" layoutY="225.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="346.0" prefWidth="1030.0" stylesheets="@../resources/KinalMallCSS.css" AnchorPane.bottomAnchor="20.0">
+              <columns>
+                <TableColumn fx:id="colCodigoEmpleado" prefWidth="93.0" text="Cod.Empleado" />
+                <TableColumn fx:id="colNombresEmpleado" prefWidth="97.0" text="Nombres" />
+                  <TableColumn fx:id="colApellidoEmpleado" prefWidth="88.0" text="Apellidos" />
+                  <TableColumn fx:id="colCorreoEmpleado" prefWidth="135.0" text="Correo" />
+                  <TableColumn fx:id="colTelefonoEmpleado" prefWidth="100.0" text="Teléfono" />
+                  <TableColumn fx:id="colFechaContrato" prefWidth="94.0" text="Fecha contrato" />
+                  <TableColumn fx:id="colSueldoEmpleado" prefWidth="102.0" text="Sueldo" />
+                  <TableColumn fx:id="colCodigoDepartamento" prefWidth="79.0" text="Cod.Depar." />
+                  <TableColumn fx:id="colCodigoCargo" prefWidth="75.0" text="Cod.Cargo" />
+                  <TableColumn fx:id="colCodigoHorario" prefWidth="82.0" text="Cod.Horario" />
+                  <TableColumn fx:id="colCodigoAdministracion" prefWidth="84.0" text="Cod.Admin" />
+              </columns>
+            </TableView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="942.0" layoutY="16.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+               <image>
+                  <Image url="@../images/back-icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
